@@ -1,7 +1,7 @@
 <h1 align="center">OpenVitals</h1>
 
 <p align="center">
-  <strong>Agent-native health data infrastructure for proactive wellness software.</strong>
+  <strong>Agent-native health operating system for proactive wellness software.</strong>
 </p>
 
 <p align="center">
