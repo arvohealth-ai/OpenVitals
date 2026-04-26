@@ -11,15 +11,15 @@
 </p>
 
 <p align="center">
-  <img alt="Node.js >= 22" src="https://img.shields.io/badge/node-%3E%3D22-339933?logo=node.js&logoColor=white" />
-  <img alt="pnpm 10.x" src="https://img.shields.io/badge/pnpm-10.x-F69220?logo=pnpm&logoColor=white" />
-  <img alt="TypeScript 5.x" src="https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white" />
+  <img alt="Node.js 22+" src="https://img.shields.io/badge/Node.js-22%2B-339933?logo=node.js&amp;logoColor=white" />
+  <img alt="pnpm 10.x" src="https://img.shields.io/badge/pnpm-10.x-F69220?logo=pnpm&amp;logoColor=white" />
+  <img alt="TypeScript 5.x" src="https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&amp;logoColor=white" />
   <img alt="MCP agent-ready" src="https://img.shields.io/badge/MCP-agent--ready-6f42c1" />
   <img alt="ARVO open-source core" src="https://img.shields.io/badge/ARVO-open--source%20core-14b8a6" />
 </p>
 
 <p align="center">
-  <img alt="Apple Health: HealthKit" src="https://img.shields.io/badge/Apple%20Health-HealthKit-000000?logo=apple&logoColor=white" />
+  <img alt="Apple Health: HealthKit" src="https://img.shields.io/badge/Apple%20Health-HealthKit-000000?logo=apple&amp;logoColor=white" />
   <img alt="Oura: real-data-beta" src="https://img.shields.io/badge/Oura-real--data--beta-2b6cb0" />
   <img alt="WHOOP: real-data-ready" src="https://img.shields.io/badge/WHOOP-real--data--ready-111111" />
 </p>
@@ -32,6 +32,10 @@ interfaces for apps, MCP tools, OpenClaw workspaces, SDKs, and local agents.
 It is built for the failure modes that make health agents unsafe in practice:
 stale data, mirrored records, provider summaries mistaken for raw streams, and
 opaque scores that cannot be explained.
+
+<p align="center">
+  <img src="docs/assets/openvitals-workflow.png" alt="OpenVitals workflow: ingest, reason, and act" width="100%" />
+</p>
 
 > OpenVitals is wellness infrastructure, not a diagnostic system or medical
 > device. It should not be used for clinical decision-making.
@@ -58,6 +62,10 @@ trusted with personal wellness context:
 The ARVO product can build proactive coaching, reminders, and companion-agent
 workflows on top of this layer. OpenVitals stays focused on the data plane,
 runtime semantics, and developer surfaces.
+
+<p align="center">
+  <img src="docs/assets/openvitals-insight.png" alt="Example insight: low HRV, low ferritin, and a new vegetarian diet can indicate an iron deficiency alert" width="100%" />
+</p>
 
 ## Why It Exists
 
