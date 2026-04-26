@@ -1,16 +1,28 @@
-# OpenVitals
+<h1 align="center">OpenVitals</h1>
 
-[![CI](https://github.com/arvohealth-ai/OpenVitals/actions/workflows/ci.yml/badge.svg)](https://github.com/arvohealth-ai/OpenVitals/actions/workflows/ci.yml)
-![Node.js](https://img.shields.io/badge/node-%3E%3D22-339933?logo=node.js&logoColor=white)
-![pnpm](https://img.shields.io/badge/pnpm-10.x-F69220?logo=pnpm&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
-![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)
-![MCP](https://img.shields.io/badge/MCP-agent--ready-6f42c1)
-![ARVO](https://img.shields.io/badge/ARVO-open--source%20core-14b8a6)
-![Apple Health](https://img.shields.io/badge/Apple%20Health-HealthKit-000000?logo=apple&logoColor=white)
-![Oura](https://img.shields.io/badge/Oura-real--data--beta-2b6cb0)
-![WHOOP](https://img.shields.io/badge/WHOOP-real--data--ready-111111)
-![Wellness Only](https://img.shields.io/badge/not%20medical%20advice-wellness%20only-red)
+<p align="center">
+  <strong>Agent-native health data infrastructure for proactive wellness software.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/arvohealth-ai/OpenVitals/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/arvohealth-ai/OpenVitals/actions/workflows/ci.yml/badge.svg" /></a>
+  <img alt="License: PolyForm Noncommercial" src="https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue" />
+  <img alt="Wellness only: not medical advice" src="https://img.shields.io/badge/not%20medical%20advice-wellness%20only-red" />
+</p>
+
+<p align="center">
+  <img alt="Node.js >= 22" src="https://img.shields.io/badge/node-%3E%3D22-339933?logo=node.js&logoColor=white" />
+  <img alt="pnpm 10.x" src="https://img.shields.io/badge/pnpm-10.x-F69220?logo=pnpm&logoColor=white" />
+  <img alt="TypeScript 5.x" src="https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white" />
+  <img alt="MCP agent-ready" src="https://img.shields.io/badge/MCP-agent--ready-6f42c1" />
+  <img alt="ARVO open-source core" src="https://img.shields.io/badge/ARVO-open--source%20core-14b8a6" />
+</p>
+
+<p align="center">
+  <img alt="Apple Health: HealthKit" src="https://img.shields.io/badge/Apple%20Health-HealthKit-000000?logo=apple&logoColor=white" />
+  <img alt="Oura: real-data-beta" src="https://img.shields.io/badge/Oura-real--data--beta-2b6cb0" />
+  <img alt="WHOOP: real-data-ready" src="https://img.shields.io/badge/WHOOP-real--data--ready-111111" />
+</p>
 
 OpenVitals is an agent-native health data plane for personal wellness software.
 It ingests data from phones, wearables, and provider APIs; keeps provenance and
