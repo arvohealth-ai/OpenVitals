@@ -1,0 +1,33 @@
+{
+  "name": "@openvitals/provider-health-connect",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openvitals/contracts": "workspace:*",
+    "@openvitals/runtime": "workspace:*"
+  },
+  "openvitals": {
+    "kind": "provider",
+    "phase": "phase-1",
+    "provider": {
+      "id": "health-connect",
+      "class": "mobile",
+      "status": "prototype",
+      "runtimePath": "hybrid",
+      "coverage": [
+        "sleep",
+        "resting_heart_rate",
+        "hrv",
+        "steps",
+        "source_filtering"
+      ]
+    }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

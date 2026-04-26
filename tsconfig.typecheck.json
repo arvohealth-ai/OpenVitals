@@ -1,0 +1,44 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@openvitals/api": ["apps/api/src/index.ts"],
+      "@openvitals/collector-android": ["packages/collector-android/src/index.ts"],
+      "@openvitals/collector-flutter": ["packages/collector-flutter/src/index.ts"],
+      "@openvitals/collector-ios": ["packages/collector-ios/src/index.ts"],
+      "@openvitals/collector-mobile-core": ["packages/collector-mobile-core/src/index.ts"],
+      "@openvitals/collector-rn": ["packages/collector-rn/src/index.ts"],
+      "@openvitals/contracts": ["packages/contracts/src/index.ts"],
+      "@openvitals/dashboard": ["apps/dashboard/src/index.ts"],
+      "@openvitals/devplayground": ["apps/devplayground/src/index.ts"],
+      "@openvitals/export-fhir": ["packages/export-fhir/src/index.ts"],
+      "@openvitals/export-omh": ["packages/export-omh/src/index.ts"],
+      "@openvitals/llm": ["packages/llm/src/index.ts"],
+      "@openvitals/mcp": ["packages/mcp/src/index.ts"],
+      "@openvitals/openclaw-skill": ["packages/openclaw-skill/src/index.ts"],
+      "@openvitals/openclaw-workspace-recovery": ["packages/openclaw-workspace-recovery/src/index.ts"],
+      "@openvitals/provider-apple-health": ["providers/apple-health/src/index.ts"],
+      "@openvitals/provider-garmin": ["providers/garmin/src/index.ts"],
+      "@openvitals/provider-health-connect": ["providers/health-connect/src/index.ts"],
+      "@openvitals/provider-oura": ["providers/oura/src/index.ts"],
+      "@openvitals/provider-strava": ["providers/strava/src/index.ts"],
+      "@openvitals/provider-whoop": ["providers/whoop/src/index.ts"],
+      "@openvitals/runtime": ["packages/runtime/src/index.ts"],
+      "@openvitals/scores": ["packages/scores/src/index.ts"],
+      "@openvitals/sdk-ts": ["packages/sdk-ts/src/index.ts"]
+    },
+    "noEmit": true
+  },
+  "include": [
+    "apps/**/*.ts",
+    "packages/**/*.ts",
+    "providers/**/*.ts",
+    "scripts/**/*.ts"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "providers/_test/**",
+    "**/dist/**"
+  ]
+}

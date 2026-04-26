@@ -1,0 +1,32 @@
+{
+  "name": "@openvitals/provider-strava",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openvitals/contracts": "workspace:*",
+    "@openvitals/runtime": "workspace:*"
+  },
+  "openvitals": {
+    "kind": "provider",
+    "phase": "phase-1",
+    "provider": {
+      "id": "strava",
+      "class": "cloud",
+      "status": "demo-only",
+      "coverage": [
+        "workouts",
+        "distance",
+        "load",
+        "routes_pending"
+      ],
+      "runtimePath": "mock"
+    }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

@@ -1,0 +1,35 @@
+name: Score Formula
+description: Suggest changes or report defects in transparent score formulas.
+title: "[score] "
+labels:
+  - scoring
+body:
+  - type: input
+    id: score_kind
+    attributes:
+      label: Score Kind
+      description: e.g. recovery_readiness, sleep_consistency
+      placeholder: recovery_readiness
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: Problem Statement
+      description: What behavior is incorrect or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and Data Context
+      description: Include sample inputs, expected outputs, and confidence/freshness context.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Unit tests, regression checks, and explainability payload expectations.
+    validations:
+      required: true

@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  openvitals-api:
+    image: node:22-bookworm
+    working_dir: /workspace
+    volumes:
+      - ..:/workspace
+      - openvitals-local-data:/workspace/.openvitals
+    environment:
+      OPENVITALS_MODE: live
+      OPENVITALS_DB_PATH: /workspace/.openvitals/openvitals.sqlite
+      OPENVITALS_ADMIN_TOKEN: ${OPENVITALS_ADMIN_TOKEN:-openvitals-dev-admin}
+      HOST: 0.0.0.0
+      PORT: 3000
+    command: >
+      sh -lc "corepack enable &&
+      pnpm install --frozen-lockfile &&
+      pnpm --filter @openvitals/api demo"
+    ports:
+      - "3000:3000"
+
+volumes:
+  openvitals-local-data:

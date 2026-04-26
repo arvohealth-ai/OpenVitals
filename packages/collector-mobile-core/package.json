@@ -1,0 +1,21 @@
+{
+  "name": "@openvitals/collector-mobile-core",
+  "version": "0.2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@openvitals/contracts": "workspace:*"
+  },
+  "openvitals": {
+    "kind": "package",
+    "phase": "phase-1",
+    "status": "prototype",
+    "title": "Mobile collector shared core"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

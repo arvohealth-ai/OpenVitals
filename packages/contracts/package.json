@@ -1,0 +1,21 @@
+{
+  "name": "@openvitals/contracts",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "^4.1.12"
+  },
+  "openvitals": {
+    "kind": "package",
+    "phase": "phase-1",
+    "status": "demo-ready",
+    "title": "Canonical contracts"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

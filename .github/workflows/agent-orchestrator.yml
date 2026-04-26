@@ -1,0 +1,92 @@
+name: Agent Orchestrator
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: Overall task for the agent workflow to plan and dispatch.
+        required: false
+        type: string
+      description_file:
+        description: Optional repository-relative Markdown file containing the full task brief.
+        required: false
+        type: string
+      dispatch:
+        description: Create local worktrees in the runner. Usually false in CI; true for self-hosted runners.
+        required: false
+        default: false
+        type: boolean
+  issues:
+    types:
+      - labeled
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  plan:
+    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'agent-epic'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.28.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Write issue task
+        if: github.event_name == 'issues'
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          printf '# %s\n\n%s\n' "$ISSUE_TITLE" "$ISSUE_BODY" > "$RUNNER_TEMP/agent-task.md"
+
+      - name: Start agent workflow from dispatch
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          if [ -n "${{ inputs.description_file }}" ]; then
+            if [ "${{ inputs.dispatch }}" = "true" ]; then
+              pnpm agent:workflow start --description-file "${{ inputs.description_file }}" --dispatch
+            else
+              pnpm agent:workflow start --description-file "${{ inputs.description_file }}"
+            fi
+            exit 0
+          fi
+          if [ "${{ inputs.dispatch }}" = "true" ]; then
+            pnpm agent:workflow start --task "${{ inputs.task }}" --dispatch
+          else
+            pnpm agent:workflow start --task "${{ inputs.task }}"
+          fi
+
+      - name: Start agent workflow from issue
+        if: github.event_name == 'issues'
+        run: pnpm agent:workflow start --task-file "$RUNNER_TEMP/agent-task.md"
+
+      - name: Upload plan artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-workflow-plan
+          path: .agent-workflows/
+
+      - name: Comment on issue
+        if: github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh issue comment "$ISSUE_URL" --body "Agent workflow plan created. Download the \`agent-workflow-plan\` artifact from $RUN_URL, review the generated plan, then dispatch locally with \`pnpm agent:workflow dispatch --run <run-id>\` or hand off the worker prompts to OMX/Codex."

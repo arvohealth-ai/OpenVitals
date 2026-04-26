@@ -1,0 +1,35 @@
+name: Agent Epic
+description: Submit a multi-scope task for agent-orchestrated planning, implementation, verification, and iteration.
+title: "[agent-epic] "
+labels:
+  - agent-epic
+  - needs-agent-plan
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the overall outcome the agent workflow should deliver.
+      placeholder: Implement live Fitbit ingest with dashboard visibility and SDK coverage.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and Non-Goals
+      description: Include safety, compatibility, privacy, rollout, and scope boundaries.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: List the checks, user-visible behavior, and review requirements that define done.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Required Verification
+      description: Add any checks beyond pnpm build/test/smoke:e2e/typecheck.
+      placeholder: OAuth callback regression, dashboard browser screenshot, SDK example run.

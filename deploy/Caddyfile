@@ -1,0 +1,3 @@
+:80 {
+  reverse_proxy openvitals-api:3000
+}

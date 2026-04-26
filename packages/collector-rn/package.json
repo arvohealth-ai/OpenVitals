@@ -1,0 +1,21 @@
+{
+  "name": "@openvitals/collector-rn",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@openvitals/collector-mobile-core": "workspace:*"
+  },
+  "openvitals": {
+    "kind": "package",
+    "phase": "phase-1",
+    "status": "prototype",
+    "title": "React Native collector bridge"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

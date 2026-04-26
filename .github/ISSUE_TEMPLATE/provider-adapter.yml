@@ -1,0 +1,38 @@
+name: Provider Adapter
+description: Propose or report issues for provider collector adapters.
+title: "[provider] "
+labels:
+  - provider
+body:
+  - type: input
+    id: provider_id
+    attributes:
+      label: Provider ID
+      description: e.g. fitbit, withings, dexcom
+      placeholder: fitbit
+    validations:
+      required: true
+  - type: dropdown
+    id: provider_class
+    attributes:
+      label: Provider Class
+      options:
+        - mobile
+        - cloud
+    validations:
+      required: true
+  - type: textarea
+    id: coverage
+    attributes:
+      label: Target Coverage
+      description: Metrics and workflows needed for this adapter.
+      placeholder: sleep, hrv, resting_heart_rate, steps
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Contract tests, dedupe expectations, and sync behavior.
+    validations:
+      required: true

@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  openvitals-api:
+    image: node:22-bookworm
+    working_dir: /workspace
+    volumes:
+      - ..:/workspace
+      - openvitals-cloud-data:/workspace/.openvitals
+    environment:
+      OPENVITALS_MODE: live
+      OPENVITALS_DB_PATH: /workspace/.openvitals/openvitals.sqlite
+      OPENVITALS_ADMIN_TOKEN: ${OPENVITALS_ADMIN_TOKEN}
+      HOST: 0.0.0.0
+      PORT: 3000
+    command: >
+      sh -lc "corepack enable &&
+      pnpm install --frozen-lockfile &&
+      pnpm --filter @openvitals/api demo"
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - openvitals-api
+
+volumes:
+  openvitals-cloud-data:
+  caddy-data:
+  caddy-config:

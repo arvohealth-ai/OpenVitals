@@ -1,0 +1,36 @@
+{
+  "name": "@openvitals/provider-oura",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openvitals/contracts": "workspace:*",
+    "@openvitals/runtime": "workspace:*"
+  },
+  "openvitals": {
+    "kind": "provider",
+    "phase": "phase-1",
+    "provider": {
+      "id": "oura",
+      "class": "cloud",
+      "status": "real-data-beta",
+      "coverage": [
+        "heart_rate",
+        "sleep",
+        "readiness",
+        "hrv",
+        "resting_heart_rate",
+        "spo2",
+        "stress",
+        "workouts"
+      ],
+      "runtimePath": "hybrid"
+    }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

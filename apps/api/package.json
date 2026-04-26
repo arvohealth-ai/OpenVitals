@@ -1,0 +1,35 @@
+{
+  "name": "@openvitals/api",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts src/server.ts --format esm --dts",
+    "demo": "tsx src/server.ts --demo",
+    "dev": "tsx watch src/server.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@asteasolutions/zod-to-openapi": "^7.3.4",
+    "@fastify/cors": "^11.1.0",
+    "@openvitals/contracts": "workspace:*",
+    "@openvitals/dashboard": "workspace:*",
+    "@openvitals/devplayground": "workspace:*",
+    "@openvitals/export-fhir": "workspace:*",
+    "@openvitals/export-omh": "workspace:*",
+    "@openvitals/runtime": "workspace:*",
+    "@libsql/client": "^0.15.15",
+    "drizzle-orm": "^0.44.7",
+    "fastify": "^5.6.1",
+    "zod": "^4.1.12",
+    "zod-to-json-schema": "^3.24.6"
+  },
+  "openvitals": {
+    "kind": "app",
+    "phase": "phase-2",
+    "status": "demo-ready",
+    "title": "API and delivery plane"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

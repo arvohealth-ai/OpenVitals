@@ -1,0 +1,43 @@
+{
+  "name": "openvitals",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm docs:generate && turbo run build",
+    "demo": "pnpm docs:generate && pnpm --filter @openvitals/api demo",
+    "dev": "pnpm --filter @openvitals/api dev",
+    "bench:api": "tsx scripts/benchmark-api.ts",
+    "smoke:e2e": "tsx scripts/smoke-e2e.mjs",
+    "smoke:apple-health": "tsx scripts/apple-health-watch-local-e2e.mjs",
+    "openclaw:e2e": "tsx scripts/openclaw-e2e.mjs",
+    "llm:openrouter:smoke": "tsx scripts/openrouter-smoke.mjs",
+    "docs:generate": "tsx scripts/generate-docs.ts",
+    "provider:new": "tsx scripts/new-provider.ts",
+    "agent:workflow": "tsx scripts/agent-workflow.ts",
+    "agent:workflow:start": "tsx scripts/agent-workflow.ts start",
+    "agent:workflow:dispatch": "tsx scripts/agent-workflow.ts dispatch",
+    "agent:workflow:status": "tsx scripts/agent-workflow.ts status",
+    "agent:workflow:verify": "tsx scripts/agent-workflow.ts verify",
+    "agent:workflow:iterate": "tsx scripts/agent-workflow.ts iterate",
+    "agent:workflow:omx-plan": "tsx scripts/agent-workflow.ts omx-plan",
+    "agent:workflow:omx-run": "tsx scripts/agent-workflow.ts omx-run",
+    "test": "pnpm docs:generate && turbo run test",
+    "typecheck": "tsc --project tsconfig.typecheck.json --noEmit"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.6",
+    "@changesets/changelog-git": "^0.2.1",
+    "@types/node": "^24.0.8",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.6",
+    "turbo": "^2.5.8",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "version": "0.1.0",
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

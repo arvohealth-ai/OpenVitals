@@ -1,0 +1,21 @@
+{
+  "name": "@openvitals/dashboard",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@openvitals/contracts": "workspace:*"
+  },
+  "openvitals": {
+    "kind": "app",
+    "phase": "phase-2",
+    "status": "demo-ready",
+    "title": "Engineering dashboard"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

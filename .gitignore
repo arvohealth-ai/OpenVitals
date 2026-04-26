@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Generated docs
+docs/generated/
+
+# XcodeGen generated project artifacts
+examples/mobile-ios-minimal-app/OpenVitalsHealthKitDemo.xcodeproj/
+examples/mobile-ios-minimal-app/Sources/Info.plist
+examples/mobile-ios-minimal-app/WatchApp/Info.plist
+
+# Turbo
+.turbo/
+
+# Agent workflow runtime state
+.agent-workflows/
+
+# Local OpenVitals runtime/test state
+.openvitals/
+**/.openvitals/
+*.sqlite
+*.sqlite-*
+*.db
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+.vscode/
+
+# Logs
+*.log
+
+# Coverage
+coverage/

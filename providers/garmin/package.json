@@ -1,0 +1,32 @@
+{
+  "name": "@openvitals/provider-garmin",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openvitals/contracts": "workspace:*",
+    "@openvitals/runtime": "workspace:*"
+  },
+  "openvitals": {
+    "kind": "provider",
+    "phase": "phase-1",
+    "provider": {
+      "id": "garmin",
+      "class": "cloud",
+      "status": "demo-only",
+      "coverage": [
+        "activities",
+        "steps",
+        "resting_heart_rate",
+        "sync_freshness"
+      ],
+      "runtimePath": "mock"
+    }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@openvitals/provider-apple-health",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openvitals/contracts": "workspace:*",
+    "@openvitals/runtime": "workspace:*"
+  },
+  "openvitals": {
+    "kind": "provider",
+    "phase": "phase-1",
+    "provider": {
+      "id": "apple-health",
+      "class": "mobile",
+      "status": "sdk-ingest-ready",
+      "runtimePath": "hybrid",
+      "coverage": [
+        "heart_rate",
+        "sleep",
+        "resting_heart_rate",
+        "hrv",
+        "steps",
+        "workouts",
+        "apple_watch_live_workout_heart_rate",
+        "mirrored_source_detection",
+        "source_revision_metadata"
+      ]
+    }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

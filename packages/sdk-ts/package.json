@@ -1,0 +1,22 @@
+{
+  "name": "@openvitals/sdk-ts",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@openvitals/contracts": "workspace:*",
+    "zod": "^4.1.12"
+  },
+  "openvitals": {
+    "kind": "package",
+    "phase": "phase-3",
+    "status": "demo-ready",
+    "title": "TypeScript SDK"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

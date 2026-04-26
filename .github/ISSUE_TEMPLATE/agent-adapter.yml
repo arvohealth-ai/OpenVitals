@@ -1,0 +1,39 @@
+name: Agent Adapter
+description: Track MCP/OpenClaw/SDK adapter requests and integration bugs.
+title: "[agent-adapter] "
+labels:
+  - agent-adapter
+body:
+  - type: dropdown
+    id: adapter
+    attributes:
+      label: Adapter Surface
+      options:
+        - MCP
+        - OpenClaw skill/workspace
+        - TypeScript SDK
+        - Python SDK
+        - REST/Webhook/SSE
+    validations:
+      required: true
+  - type: textarea
+    id: integration_target
+    attributes:
+      label: Integration Target
+      description: Which agent runtime or workflow is being integrated?
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Current vs Expected Behavior
+      description: Include request/response shape and auth scope used.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Include concrete tool calls or endpoint calls that must pass.
+    validations:
+      required: true

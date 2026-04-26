@@ -1,0 +1,27 @@
+{
+  "name": "@openvitals/mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "openvitals-mcp": "./dist/stdio.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/stdio.ts --format esm --dts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openvitals/contracts": "workspace:*",
+    "@openvitals/sdk-ts": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "zod": "^4.1.12"
+  },
+  "openvitals": {
+    "kind": "package",
+    "phase": "phase-3",
+    "status": "demo-ready",
+    "title": "MCP server"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

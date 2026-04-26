@@ -1,0 +1,21 @@
+{
+  "name": "@openvitals/scores",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@openvitals/contracts": "workspace:*"
+  },
+  "openvitals": {
+    "kind": "package",
+    "phase": "phase-2",
+    "status": "demo-ready",
+    "title": "Transparent score formulas"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}
