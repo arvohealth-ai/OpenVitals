@@ -1,5 +1,17 @@
 # OpenVitals
 
+[![CI](https://github.com/arvohealth-ai/OpenVitals/actions/workflows/ci.yml/badge.svg)](https://github.com/arvohealth-ai/OpenVitals/actions/workflows/ci.yml)
+![Node.js](https://img.shields.io/badge/node-%3E%3D22-339933?logo=node.js&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-10.x-F69220?logo=pnpm&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
+![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)
+![MCP](https://img.shields.io/badge/MCP-agent--ready-6f42c1)
+![ARVO](https://img.shields.io/badge/ARVO-open--source%20core-14b8a6)
+![Apple Health](https://img.shields.io/badge/Apple%20Health-HealthKit-000000?logo=apple&logoColor=white)
+![Oura](https://img.shields.io/badge/Oura-real--data--beta-2b6cb0)
+![WHOOP](https://img.shields.io/badge/WHOOP-real--data--ready-111111)
+![Wellness Only](https://img.shields.io/badge/not%20medical%20advice-wellness%20only-red)
+
 OpenVitals is an agent-native health data plane for personal wellness software.
 It ingests data from phones, wearables, and provider APIs; keeps provenance and
 freshness visible; derives deterministic wellness state; and exposes safe
@@ -11,6 +23,29 @@ opaque scores that cannot be explained.
 
 > OpenVitals is wellness infrastructure, not a diagnostic system or medical
 > device. It should not be used for clinical decision-making.
+
+## Open Source Core For ARVO
+
+[ARVO](https://arvohealth.ai) is the proactive health OS and product experience:
+it connects wearables, labs, and daily habits so a health companion can notice
+meaningful changes and nudge users toward action. Ari is ARVO's first health
+companion agent.
+
+OpenVitals is the open source core underneath that product direction. It focuses
+on the reusable infrastructure that health agents need before they can be
+trusted with personal wellness context:
+
+- ingesting Apple Health, Apple Watch, Oura, WHOOP, Health Connect, and future
+  provider data;
+- preserving provenance, freshness, source priority, and dedupe evidence;
+- making provider delays, mirrored records, stale data, and missing signals
+  explicit to agents;
+- exposing the same semantics through REST, MCP, SDKs, OpenClaw workspaces, and
+  mobile collector examples.
+
+The ARVO product can build proactive coaching, reminders, and companion-agent
+workflows on top of this layer. OpenVitals stays focused on the data plane,
+runtime semantics, and developer surfaces.
 
 ## Why It Exists
 
