@@ -1,5 +1,8 @@
 # QA Acceptance Report: openvitals-v0.6
 
+> Languages: [English](./qa-acceptance.md) | [简体中文](./qa-acceptance-zh.md)
+
+
 This report tracks automated and manual acceptance for the OpenVitals v0.6 hardware-backed wedge. It is intentionally conservative: hardware evidence remains **pending** unless a human provides real device/account evidence.
 
 Last integrated verification update: 2026-04-26.

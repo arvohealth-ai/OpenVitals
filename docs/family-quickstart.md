@@ -1,5 +1,8 @@
 # Family Quickstart
 
+> Languages: [English](./family-quickstart.md) | [简体中文](./family-quickstart-zh.md)
+
+
 This guide covers a v0.6 owner + family deployment on one self-hosted node.
 
 The important constraint is simple: each profile has its own runtime state, scheduler state, provider credentials, Apple Health connector session, and agent token. Do not share one WHOOP token, one Oura token, or one Apple Health session across family members.

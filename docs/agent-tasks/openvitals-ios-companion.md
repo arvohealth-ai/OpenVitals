@@ -1,5 +1,8 @@
 # OpenVitals iOS Companion App Agent Task Brief
 
+> Languages: [English](./openvitals-ios-companion.md) | [简体中文](./openvitals-ios-companion-zh.md)
+
+
 Repo: `<path-to-openvitals>`
 
 Goal: turn the current Apple Health/Apple Watch reference template into a production-shaped OpenVitals iOS companion experience where the iPhone app is the primary required install path and the Apple Watch app is an optional add-on for explicit live workout heart-rate capture.

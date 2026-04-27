@@ -1,5 +1,8 @@
 # OpenVitals / OpenClaw 凭据获取清单
 
+> 语言： [English](./credentials-setup.md) | [简体中文](./credentials-setup-zh.md)
+
+
 最后核对日期：2026-04-26。
 
 这份文档列出当前仓库完成真实 OpenClaw + OpenVitals E2E、Oura、WHOOP、iPhone + Apple Watch 硬件测试时需要准备的全部凭据和权限。不要把任何真实密钥提交到 Git；本仓库 `.gitignore` 已忽略 `.env` 和 `.env.*`。

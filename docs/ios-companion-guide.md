@@ -1,5 +1,8 @@
 # iOS Companion Guide (Apple Health + Optional Apple Watch)
 
+> Languages: [English](./ios-companion-guide.md) | [简体中文](./ios-companion-guide-zh.md)
+
+
 The OpenVitals iOS companion is the required Apple Health connector. Install and configure the iPhone app for normal Apple Health sync. The Apple Watch app is an optional add-on used only when a user wants live workout heart-rate capture from an active workout session.
 
 ## Product rules

@@ -1,5 +1,8 @@
 # Agent Orchestrator
 
+> Languages: [English](./agent-orchestrator.md) | [简体中文](./agent-orchestrator-zh.md)
+
+
 This repository includes a first-pass agent workflow runner for large tasks that need planning, task assignment, isolated development, verification, and iteration.
 
 The workflow keeps GitHub as the source of truth for Issues, PRs, CI, and review. Local execution uses one git worktree per worker task so multiple Codex/OMX workers can operate without overwriting each other.

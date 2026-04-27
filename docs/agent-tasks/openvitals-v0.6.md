@@ -1,5 +1,8 @@
 # OpenVitals v0.6 Agent Task Brief
 
+> Languages: [English](./openvitals-v0.6.md) | [简体中文](./openvitals-v0.6-zh.md)
+
+
 Repo: `<path-to-openvitals>`
 
 Goal: turn the current prototype into a hardware-backed live-data wedge for iPhone + Apple Watch + Oura Ring + WHOOP, while keeping the repo green and making data semantics honest for agent use.

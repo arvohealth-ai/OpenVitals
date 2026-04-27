@@ -1,5 +1,8 @@
 # Real Data Quickstart (Apple Health + Apple Watch + Oura + WHOOP)
 
+> Languages: [English](./real-data-quickstart.md) | [简体中文](./real-data-quickstart-zh.md)
+
+
 This guide targets the v0.6 hardware-backed wedge:
 
 - Apple Health via the required iPhone companion app and device-side anchored HealthKit ingest.

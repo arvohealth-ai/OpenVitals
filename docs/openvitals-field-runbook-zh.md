@@ -1,5 +1,8 @@
 # OpenVitals 项目现场运行手册
 
+> 语言： [English](./openvitals-field-runbook.md) | [简体中文](./openvitals-field-runbook-zh.md)
+
+
 最后核对日期：2026-04-27。
 
 这份手册记录这次把 OpenVitals 从本地 demo 推到真实 Oura、WHOOP、OpenRouter、OpenClaw、iPhone HealthKit、Apple Watch 硬件路径时遇到的步骤、坑和验证方式。目标读者是两类人：
@@ -138,7 +141,7 @@ pnpm llm:openrouter:smoke
 - 免费模型可能限流或不可用；稳定 smoke 可以设置 `OPENVITALS_OPENROUTER_ALLOW_FREE=false`。
 - 命令应只输出选中的模型、简短回复和 token usage，不应打印 API key。
 
-更多细节见 [OpenRouter LLM](./openrouter-llm.md)。
+更多细节见 [OpenRouter LLM](./openrouter-llm-zh.md)。
 
 ## 4. Oura 凭据、OAuth 和语义
 
@@ -324,7 +327,7 @@ xcodebuild -project examples/mobile-ios-minimal-app/OpenVitalsHealthKitDemo.xcod
 - 用户在 iPhone / Watch 上授予 HealthKit 权限。
 - 用户启动和停止 Watch live workout session。
 
-完整步骤和错误处理见 [iOS Hardware QA Runbook](./ios-hardware-runbook.md)。
+完整步骤和错误处理见 [iOS Hardware QA Runbook](./ios-hardware-runbook-zh.md)。
 
 ## 7. Xcode 细节和已遇到的错误
 
@@ -524,7 +527,7 @@ pnpm openclaw:e2e
 - 真实 Oura / WHOOP OAuth。
 - iPhone / Apple Watch 硬件 HealthKit 授权。
 
-更多细节见 [OpenClaw Submodule E2E](./openclaw-e2e.md)。
+更多细节见 [OpenClaw Submodule E2E](./openclaw-e2e-zh.md)。
 
 ## 9. OMX / agent workflow 长程任务
 
@@ -597,7 +600,7 @@ pnpm agent:workflow verify --run openvitals-v0.6
 
 硬件 gate 不应由 agent 编造通过。没有 Oura/WHOOP/iPhone/Watch 的真实证据时，应标为 pending-hardware，并写清楚需要什么证据。
 
-更多细节见 [Agent Orchestrator](./agent-orchestrator.md)。
+更多细节见 [Agent Orchestrator](./agent-orchestrator-zh.md)。
 
 ## 10. 数据语义和用户承诺边界
 

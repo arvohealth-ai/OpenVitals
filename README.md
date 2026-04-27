@@ -24,6 +24,11 @@
   <img alt="WHOOP: real-data-ready" src="https://img.shields.io/badge/WHOOP-real--data--ready-111111" />
 </p>
 
+<p align="center">
+  <a href="./README.md">English</a> |
+  <a href="./README.zh-CN.md">简体中文</a>
+</p>
+
 OpenVitals is an agent-native health data plane for personal wellness software.
 It ingests data from phones, wearables, and provider APIs; keeps provenance and
 freshness visible; derives deterministic wellness state; and exposes safe
@@ -211,8 +216,9 @@ cp .env.example .env.local
 
 Useful guides:
 
+- [Documentation Index](./docs/README.md)
 - [Real Data Quickstart](./docs/real-data-quickstart.md)
-- [Credentials Setup (中文)](./docs/credentials-setup-zh.md)
+- [Credentials Setup](./docs/credentials-setup.md)
 - [iOS Companion Guide](./docs/ios-companion-guide.md)
 - [iOS Hardware QA Runbook](./docs/ios-hardware-runbook.md)
 - [Hardware Test Plan](./docs/hardware-test-plan.md)

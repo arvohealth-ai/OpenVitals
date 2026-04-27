@@ -1,5 +1,8 @@
 # iOS Hardware QA Runbook
 
+> Languages: [English](./ios-hardware-runbook.md) | [简体中文](./ios-hardware-runbook-zh.md)
+
+
 This runbook captures the real setup failures, checks, and recovery steps seen while validating the OpenVitals iPhone companion and optional Apple Watch live-workout app. Keep it close to the hardware path: most automated checks can prove build and API semantics, but final Apple Health and Apple Watch acceptance still needs real devices and user-granted HealthKit permissions.
 
 ## What Can Be Automated

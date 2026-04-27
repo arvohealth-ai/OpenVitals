@@ -1,5 +1,8 @@
 # Hardware Test Plan
 
+> Languages: [English](./hardware-test-plan.md) | [简体中文](./hardware-test-plan-zh.md)
+
+
 This matrix records the manual evidence required before OpenVitals v0.6 can be called hardware-backed for iPhone, Apple Watch, Oura, WHOOP, and mirrored-source dedupe. Automated checks can verify contracts and mocks, but the hardware rows below remain **pending** until a human supplies device/account evidence.
 
 ## Evidence rules

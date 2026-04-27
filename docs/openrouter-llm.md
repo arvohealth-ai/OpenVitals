@@ -1,5 +1,8 @@
 # OpenRouter LLM
 
+> Languages: [English](./openrouter-llm.md) | [简体中文](./openrouter-llm-zh.md)
+
+
 OpenVitals includes a small OpenRouter adapter in `@openvitals/llm`. It uses OpenRouter's OpenAI-compatible Chat Completions endpoint and can list OpenRouter models to pick a low-cost text chat model for a smoke test.
 
 Official OpenRouter references:

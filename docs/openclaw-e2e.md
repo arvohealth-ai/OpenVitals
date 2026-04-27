@@ -1,5 +1,8 @@
 # OpenClaw Submodule E2E
 
+> Languages: [English](./openclaw-e2e.md) | [简体中文](./openclaw-e2e-zh.md)
+
+
 OpenVitals keeps the upstream OpenClaw repository as a pinned submodule at `vendor/openclaw`. The current pin is OpenClaw `v2026.4.24`.
 
 ## Setup

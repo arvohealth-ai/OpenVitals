@@ -1,5 +1,8 @@
 # Self-Hosting
 
+> Languages: [English](./self-hosting.md) | [简体中文](./self-hosting-zh.md)
+
+
 OpenVitals is designed to be self-hosted as a local-first health data plane and proactive wellness runtime.
 
 ## Modes
